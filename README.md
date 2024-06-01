@@ -29,7 +29,7 @@ Create a json file that becomes the base for the mode information and create a J
     Language.expand = [
         { "code": "ko", "url": "https://example.com/lang/ko.json" },
         { "code": "en", "url": "https://example.com/lang/en.json" },
-        { "code": "ja", "url": "https://example.com/lang/ja.json" },
+        { "code": "ja", "url": "https://example.com/lang/ja.json" }
     ];
     Image.expand = [
         "https://example.com/image/main.png",
