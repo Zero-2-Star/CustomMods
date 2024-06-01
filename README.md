@@ -39,14 +39,17 @@ Create a json file that becomes the base for the mode information and create a J
     Audio.expand = [
         "https://example.com/audio/main.mp3"
     ]
+
     MainScene.backgroundPath = "https://example.com/image/main.png";
     IntroScene.backgroundPath = "https://example.com/image/intro.png"
     MainScene.audioPath = "https://example.com/audio/main.mp3";
+
     Scene.sceneExpand = (name) => {
         if (name == "example") {
             return getScene_example();
         }
     };
+
     Scene.frameExpand = (info, isSkip) => {
         let type = info["type"];
         let scene = Scene.getScene(Scene.sceneName);
@@ -60,6 +63,7 @@ Create a json file that becomes the base for the mode information and create a J
         return isSkip;
     };
     MainScene.playMoveScene = "example";
+
     // Name and import resources for your convenience
     Resource.register("image", "main", "https://example.com/image/main.png");
     String resourceUrl = Resource.get("image", "main");
