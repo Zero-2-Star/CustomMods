@@ -31,8 +31,6 @@ Create a json file that becomes the base for the mode information and create a J
     Resource.register("image", "main", "https://example.com/image/main.png");
     Resource.register("image", "intro", "https://example.com/image/intro.png");
     Resource.register("audio", "main", "https://example.com/audio/main.mp3");
-    // Get the url of the resource.
-    let resourceUrl = Resource.getUrl("image", "main");
 
     Language.expand = [
         { "code": "ko", "url": "https://example.com/lang/ko.json" },
