@@ -64,7 +64,7 @@ Create a json file that becomes the base for the mode information and create a J
     };
     MainScene.playMoveScene = "example";
 
-    // Name and import resources for your convenience
+    // For your convenience, name and import the resource.
     Resource.register("image", "main", "https://example.com/image/main.png");
     String resourceUrl = Resource.get("image", "main");
 })();
