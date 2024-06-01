@@ -43,6 +43,16 @@ Create a json file that becomes the base for the mode information and create a J
     MainScene.audioPath = "https://example.com/audio/main.mp3";
     Scene.sceneExpand = (name) => {};
     Scene.frameExpand = (info, isSkip) => {
+        let type = info["type"];
+        let scene = Scene.getScene(Scene.sceneName);
+        if (type == "customUI") {
+            let newEl = document.createElement("div");
+            newEl.classList.add("custom_ui");
+            newEl.innerHTML = `
+                Hello World!
+            `;
+            scene.appendChild(newEl);
+        }
         return isSkip;
     }
 })();
