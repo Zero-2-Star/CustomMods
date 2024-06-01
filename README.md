@@ -5,6 +5,7 @@ Create a json file that becomes the base for the mode information and create a J
 ```json
 {
     "cover": "https://example.com/cover.png",
+    "favicon": "https://example.com/favicon.png",
     "title": {
         "en": "Example Mod",
         "ko": "예시용 모드",
