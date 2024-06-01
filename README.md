@@ -54,6 +54,7 @@ Create a json file that becomes the base for the mode information and create a J
             newEl.classList.add("custom_ui");
             newEl.textContent = info["text"];
             scene.appendChild(newEl);
+            isSkip = true;
         }
         return isSkip;
     }
