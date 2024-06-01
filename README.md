@@ -13,11 +13,11 @@ Create a json file that becomes the base for the mode information and create a J
     "language": "ko", // 2-letter language code
     "creators": ["Example1", "Example2"],
     "script": [
-        "https://example.com/core.js",
+        "https://example.com/mod.js",
         "https://example.com/scene.js"
     ],
     "style": [
-        "https://example.com/core.css",
+        "https://example.com/mod.css",
         "https://example.com/scene.css"
     ]
 }
