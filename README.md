@@ -41,7 +41,11 @@ Create a json file that becomes the base for the mode information and create a J
     MainScene.backgroundPath = "https://example.com/image/main.png";
     IntroScene.backgroundPath = "https://example.com/image/intro.png"
     MainScene.audioPath = "https://example.com/audio/main.mp3";
-    Scene.sceneExpand = (name) => {};
+    Scene.sceneExpand = (name) => {
+        if (name == "example") {
+            return getScene_example();
+        }
+    };
     Scene.frameExpand = (info, isSkip) => {
         let type = info["type"];
         let scene = Scene.getScene(Scene.sceneName);
@@ -56,4 +60,12 @@ Create a json file that becomes the base for the mode information and create a J
         return isSkip;
     }
 })();
+
+function getScene_example() {
+    return [
+        { "type": "background", "color": "#000000" },
+        { "type": "dialog", "text": "Hello World!", "location": "Empty place", "name": "Miraku", "color": "#ffffff" },
+        { "type": "dialog", "text": "My name is Miraku!", "location": "Empty place", "name": "Miraku", "color": "#ffffff" }
+    ];
+}
 ```
