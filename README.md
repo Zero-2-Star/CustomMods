@@ -69,3 +69,12 @@ function getScene_example() {
     ];
 }
 ```
+
+# mod.css
+```css
+.custom_ui {
+    width: 100%; height: 100%;
+    position: absolute; color: #ffffff;
+    font-size: calc(var(--gh) * 0.1);
+}
+```
