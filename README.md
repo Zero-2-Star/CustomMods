@@ -22,3 +22,28 @@ Create a json file that becomes the base for the mode information and create a J
     ]
 }
 ```
+
+# mod.js
+```javascript
+(() => {
+    Language.expand = [
+        { "code": "ko", "url": "https://example.com/lang/ko.json" },
+        { "code": "en", "url": "https://example.com/lang/en.json" },
+        { "code": "ja", "url": "https://example.com/lang/ja.json" },
+    ];
+    Image.expand = [
+        "https://example.com/image/main.png",
+        "https://example.com/image/intro.png"
+    ]
+    Audio.expand = [
+        "https://example.com/audio/main.mp3"
+    ]
+    MainScene.backgroundPath = "https://example.com/image/main.png";
+    IntroScene.backgroundPath = "https://example.com/image/intro.png"
+    MainScene.audioPath = "https://example.com/audio/main.mp3";
+    Scene.sceneExpand = (name) => {};
+    Scene.frameExpand = (info, isSkip) => {
+        return isSkip;
+    }
+})();
+```
