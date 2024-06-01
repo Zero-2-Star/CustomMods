@@ -52,9 +52,7 @@ Create a json file that becomes the base for the mode information and create a J
         if (type == "customUI") {
             let newEl = document.createElement("div");
             newEl.classList.add("custom_ui");
-            newEl.innerHTML = `
-                Hello World!
-            `;
+            newEl.textContent = info["text"];
             scene.appendChild(newEl);
         }
         return isSkip;
@@ -63,6 +61,7 @@ Create a json file that becomes the base for the mode information and create a J
 
 function getScene_example() {
     return [
+        { "type": "customUI", "text": "Custom UI!" },
         { "type": "background", "color": "#000000" },
         { "type": "dialog", "text": "Hello World!", "location": "Empty place", "name": "Miraku", "color": "#ffffff" },
         { "type": "dialog", "text": "My name is Miraku!", "location": "Empty place", "name": "Miraku", "color": "#ffffff" }
