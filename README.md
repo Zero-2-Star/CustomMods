@@ -27,22 +27,24 @@ Create a json file that becomes the base for the mode information and create a J
 # mod.js
 ```javascript
 (() => {
+    // For your convenience, name and import the resource.
+    Resource.register("image", "main", "https://example.com/image/main.png");
+    Resource.register("image", "intro", "https://example.com/image/intro.png");
+    Resource.register("audio", "main", "https://example.com/audio/main.mp3");
+    // Get the url of the resource.
+    let resourceUrl = Resource.getUrl("image", "main");
+
     Language.expand = [
         { "code": "ko", "url": "https://example.com/lang/ko.json" },
         { "code": "en", "url": "https://example.com/lang/en.json" },
         { "code": "ja", "url": "https://example.com/lang/ja.json" }
     ];
-    Image.expand = [
-        "https://example.com/image/main.png",
-        "https://example.com/image/intro.png"
-    ]
-    Audio.expand = [
-        "https://example.com/audio/main.mp3"
-    ]
+    Image.expand = Resource.getList("image");
+    Audio.expand = Resource.getList("audio");
 
-    MainScene.backgroundPath = "https://example.com/image/main.png";
-    IntroScene.backgroundPath = "https://example.com/image/intro.png"
-    MainScene.audioPath = "https://example.com/audio/main.mp3";
+    MainScene.backgroundPath = Resource.getUrl("image", "main");
+    IntroScene.backgroundPath = Resource.getUrl("image", "intro");
+    MainScene.audioPath = Resource.getUrl("audio", "main");
     MainScene.playMoveScene = "example";
 
     Scene.sceneExpand = (name) => {
@@ -63,10 +65,6 @@ Create a json file that becomes the base for the mode information and create a J
         }
         return isSkip;
     };
-
-    // For your convenience, name and import the resource.
-    Resource.register("image", "main", "https://example.com/image/main.png");
-    String resourceUrl = Resource.get("image", "main");
 })();
 
 function getScene_example() {
