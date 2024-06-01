@@ -57,7 +57,8 @@ Create a json file that becomes the base for the mode information and create a J
             isSkip = true;
         }
         return isSkip;
-    }
+    };
+    MainScene.playMoveScene = "example";
 })();
 
 function getScene_example() {
