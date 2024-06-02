@@ -39,6 +39,7 @@ Create a json file that becomes the base for the mode information and create a J
     ];
     Image.expand = Resource.getList("image");
     Audio.expand = Resource.getList("audio");
+    Spacebar.expand = [ "example1", "example2" ];
 
     MainScene.backgroundPath = Resource.getUrl("image", "main");
     IntroScene.backgroundPath = Resource.getUrl("image", "intro");
@@ -63,7 +64,6 @@ Create a json file that becomes the base for the mode information and create a J
         }
         return isSkip;
     };
-    Spacebar.expand = [ "example1", "example2" ];
 })();
 
 function getScene_example() {
