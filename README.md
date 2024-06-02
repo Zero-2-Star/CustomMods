@@ -11,7 +11,7 @@ Create a json file that becomes the base for the mode information and create a J
         "ko": "예시용 모드",
         "ja": "例示用モード"
     },
-    "language": "ko", # 2-letter language code
+    "language": "ko", // 2-letter language code
     "creators": ["Example1", "Example2"],
     "script": [
         "https://example.com/mod.js",
