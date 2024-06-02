@@ -63,10 +63,7 @@ Create a json file that becomes the base for the mode information and create a J
         }
         return isSkip;
     };
-    Spacebar.expand = [
-        "example1",
-        "example2"
-    ];
+    Spacebar.expand = [ "example1", "example2" ];
 })();
 
 function getScene_example() {
