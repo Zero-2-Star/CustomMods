@@ -1,0 +1,19 @@
+{
+    "cover": "https://example.com/cover.png",
+    "favicon": "https://example.com/favicon.png",
+    "title": {
+        "en": "Example Mod",
+        "ko": "예시용 모드",
+        "ja": "例示用モード"
+    },
+    "language": "ko",
+    "creators": ["Example1", "Example2"],
+    "script": [
+        "https://example.com/mod.js",
+        "https://example.com/scene.js"
+    ],
+    "style": [
+        "https://example.com/mod.css",
+        "https://example.com/scene.css"
+    ]
+}
