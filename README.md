@@ -6,6 +6,7 @@ Create a json file that becomes the base for the mode information and create a J
 {
     "cover": "https://example.com/cover.png",
     "favicon": "https://example.com/favicon.png",
+    "version": "v0.0.1-alpha",
     "title": {
         "en": "Example Mod",
         "ko": "예시용 모드",
